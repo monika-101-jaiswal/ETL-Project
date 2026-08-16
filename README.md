@@ -84,8 +84,8 @@ Processed analytical results can be exported as a CSV file directly from the das
 The ETL pipeline performs the following operations:
 
 1. Extract
-
 Data is extracted from PostgreSQL using SQL queries.
+
 
 2. Clean
 
