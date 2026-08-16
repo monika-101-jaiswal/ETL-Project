@@ -1,189 +1,249 @@
-# ETL-Project
-End-to-end ETL and analytics project using Python, PostgreSQL, Pandas, and Streamlit for Energy Analytics processing and dashboarding.
+<div align="center">
 
-📌 Project Overview
+# ⚡ Smart Meter ETL & Analytics Dashboard
 
-This project demonstrates an end-to-end ETL (Extract, Transform, Load) and analytics workflow for Energy Analytics Dashboard.
+### End-to-End Data Engineering & Analytics Project
 
-The application extracts data from a PostgreSQL database, processes the data in batches using Python, performs data cleaning and transformation, applies business-based classification logic, generates analytical summaries, and presents the results through an interactive Streamlit dashboard.
+<p>
+  <b>Python</b> •
+  <b>PostgreSQL</b> •
+  <b>Pandas</b> •
+  <b>NumPy</b> •
+  <b>Streamlit</b>
+</p>
 
-The project is designed to demonstrate practical skills in:
+<br>
 
-> Data Engineering
-> ETL Development
-> Python Data Processing
-> SQL & PostgreSQL
-> Data Cleaning & Transformation
-> Data Aggregation
-> Dashboard Development
+<img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql">
+<img src="https://img.shields.io/badge/Pandas-Data%20Processing-blue?style=for-the-badge&logo=pandas">
+<img src="https://img.shields.io/badge/NumPy-Numerical-orange?style=for-the-badge&logo=numpy">
+<img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit">
 
-🏗️ Project Architecture
-                    Energy Analytics Data
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │ PostgreSQL  │
-                    └──────┬──────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    |  E_and_T.py |
-                    │             │
-                    │ Extract     │
-                    │ Transform   │
-                    │ Aggregate   │
-                    └──────┬──────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │ Processed   │
-                    │ Analytics   │
-                    └──────┬──────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │   trys.py    │
-                    │ Streamlit   │
-                    └──────┬──────┘
-                           │
-                           ▼
-                  ┌──────────────────┐
-                  │ Interactive      │
-                  │ Dashboard        │
-                  └──────────────────┘
+</div>
 
-🛠️ Tech Stack
-Technology	Purpose
-🐍 Python	ETL & data processing
-🐼 Pandas	Data cleaning & transformation
-🔢 NumPy	Data classification & numerical operations
-🗄️ PostgreSQL	Data storage & SQL extraction
-🔌 Psycopg2	PostgreSQL connectivity
-📊 Streamlit	Interactive dashboard
-📗 Excel	Reference / mapping data
+---
 
-📊 Dashboard
+## 📌 Project Overview
 
-The Streamlit dashboard provides a high-level analytical view of the processed data.
+This project demonstrates an end-to-end **ETL (Extract, Transform, Load) and analytics workflow** for large-scale smart meter data.
 
-KPI Metrics
-Total Records
-Category-wise Records
-Type-wise Distribution
-Status-wise Summary
-Analytical View
+The application extracts data from **PostgreSQL**, processes large datasets in batches using **Python and Pandas**, performs data cleaning and transformation, applies business-based classification logic, generates analytical summaries, and presents the processed results through an interactive **Streamlit dashboard**.
 
-The dashboard includes a Category vs Status summary table to provide a consolidated view of the processed data.
+The project demonstrates practical implementation of:
 
-Export
+- 🐍 Python-based ETL
+- 🗄️ SQL & PostgreSQL
+- 📊 Data Analytics
+- 🔄 Data Transformation
+- 📈 Data Aggregation
+- 🖥️ Streamlit Dashboard Development
 
-Processed analytical results can be exported as a CSV file directly from the dashboard.
+---
 
-⚙️ Data Processing
+# 🔄 ETL Workflow
 
-The ETL pipeline performs the following operations:
+<div align="center">
 
-1. Extract
+<table>
+<tr>
+
+<td align="center">
+<h3>🗄️</h3>
+<b>PostgreSQL</b><br>
+Source Data
+</td>
+
+<td>➡️</td>
+
+<td align="center">
+<h3>📥</h3>
+<b>EXTRACT</b><br>
+SQL + Python
+</td>
+
+<td>➡️</td>
+
+<td align="center">
+<h3>🐍</h3>
+<b>PROCESS</b><br>
+Pandas
+</td>
+
+<td>➡️</td>
+
+<td align="center">
+<h3>🔄</h3>
+<b>TRANSFORM</b><br>
+Clean + Map + Classify
+</td>
+
+<td>➡️</td>
+
+<td align="center">
+<h3>📊</h3>
+<b>AGGREGATE</b><br>
+Pivot + KPIs
+</td>
+
+<td>➡️</td>
+
+<td align="center">
+<h3>⚡</h3>
+<b>STREAMLIT</b><br>
+Dashboard
+</td>
+
+</tr>
+</table>
+
+</div>
+
+---
+
+# 📥 1. Data Extraction
+
+Data is extracted from PostgreSQL using SQL queries and processed in batches using Python.
+
+### Key Techniques
+
+- SQL-based data extraction
+- PostgreSQL connectivity using Psycopg2
+- Batch processing using `fetchmany()`
+- Large dataset handling
+
+<div align="center">
+
+### 🔹 Extraction Process
+
+<img src="screenshots/01-data-extraction.png" width="90%">
+
+</div>
+
+---
+
+# 🔄 2. Data Transformation
+
+After extraction, the data goes through multiple transformation steps using Pandas and NumPy.
+
+### Transformation Steps
+
+- Remove unnecessary spaces
+- Standardize text values
+- Convert numeric columns
+- Handle missing values
+- Map Supply Type
+- Apply classification rules
+- Generate analytical categories
+
+<div align="center">
+
+### 🔹 Transformation Logic
+
+<img src="screenshots/02-data-transformation.png" width="90%">
+
+</div>
+
+---
+
+# 📊 3. Data Aggregation & Analytics
+
+The transformed data is aggregated to generate meaningful analytical summaries.
+
+### Analytics Generated
+
+- Category-wise counts
+- Status-wise counts
+- Type-wise distribution
+- Category vs Status analysis
+- Pivot summaries
+
+<div align="center">
+
+### 🔹 Aggregation & Analytics
+
+<img src="screenshots/03-data-aggregation.png" width="90%">
+
+</div>
+
+---
+
+# 🖥️ 4. Streamlit Dashboard
+
+The processed results are passed to a Streamlit application for interactive visualization.
+
+### Dashboard Components
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center">📌<br><b>KPI Cards</b></td>
+<td align="center">📊<br><b>Category Analysis</b></td>
+<td align="center">📋<br><b>Status Analysis</b></td>
+<td align="center">📥<br><b>CSV Export</b></td>
+</tr>
+</table>
+
+</div>
+
+<div align="center">
+
+### 🔹 Streamlit Application
+
+<img src="screenshots/04-streamlit-code.png" width="90%">
+
+</div>
+
+---
+
+# 🚀 5. Final Dashboard
+
+The final processed output is presented through an interactive Streamlit dashboard.
+
+<div align="center">
+
+<img src="screenshots/05-dashboard.png" width="95%">
+
+</div>
+
+---
+
+# 🛠️ Tech Stack
+
+<div align="center">
+
+| Technology | Purpose |
+|:---:|:---|
+| 🐍 **Python** | ETL & Data Processing |
+| 🐼 **Pandas** | Data Cleaning & Transformation |
+| 🔢 **NumPy** | Numerical Operations & Classification |
+| 🗄️ **PostgreSQL** | Database & SQL Queries |
+| 🔌 **Psycopg2** | PostgreSQL Connectivity |
+| 📊 **Streamlit** | Interactive Dashboard |
+| 📗 **Excel** | Reference / Mapping Data |
+
+</div>
+
+---
+
+# ⚙️ Data Processing Pipeline
+
+## 1️⃣ Extract
+
 Data is extracted from PostgreSQL using SQL queries.
 
+## 2️⃣ Clean
 
-2. Clean
+Data is standardized and prepared for transformation.
 
-Data fields are standardized by:
-
-Removing unnecessary spaces
-Standardizing text case
-Converting numeric fields
-Handling missing values
-Preparing fields for mapping
-3. Transform
-
-Business rules are applied to classify records based on connected load and other attributes.
-
-Example classification logic:
-
-Load
- │
- ├── ≤ 5        → Type A
- │
- ├── >5 – 25    → Type B
- │
- ├── >25 – 50   → Type C
- │
- └── >50        → Type D
-4. Aggregate
-
-Processed records are aggregated to generate:
-
-Category counts
-Group-wise counts
-Status-wise counts
-Pivot summaries
-5. Visualize
-
-The processed output is presented through an interactive Streamlit dashboard.
-
-📁 Project Structure
-smart-meter-etl-dashboard/
-│
-├── app.py
-├── etl.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-└── screenshots/
-    └── dashboard.png
-▶️ How to Run
-1. Clone the repository
-git clone https://github.com/your-username/smart-meter-etl-dashboard.git
-2. Navigate to the project
-cd smart-meter-etl-dashboard
-3. Install dependencies
-pip install -r requirements.txt
-4. Configure PostgreSQL
-
-Create/configure your local PostgreSQL database and update the connection through environment variables or your local configuration.
-
-Database credentials and confidential data should not be committed to GitHub.
-
-5. Run the Streamlit application
-streamlit run app.py
-🔐 Data Privacy
-
-This repository is intended as a portfolio demonstration project.
-
-No confidential production data, database credentials, consumer information, meter identifiers, or sensitive company information should be included in the public repository.
-
-For demonstration purposes, sensitive fields and business-specific names can be replaced with generic/sample values.
-
-🎯 Learning Outcomes
-
-This project demonstrates practical experience with:
-
-Python-based ETL pipelines
-SQL and PostgreSQL
-Large dataset batch processing
-Pandas data transformation
-Data quality and cleaning
-Business-rule based classification
-Data aggregation and pivoting
-Streamlit dashboard development
-Separation of ETL and presentation layers
-📌 Future Enhancements
-📈 Add interactive charts
-🔎 Add dashboard filters
-⚡ Improve ETL performance
-💾 Add caching
-📊 Add trend analysis
-☁️ Deploy dashboard to cloud
-🔄 Automate scheduled data refresh
-🐳 Containerize using Docker
-
-
-👩‍💻 Author
-Monika Jaiswal
-
-Python | SQL | Data Analytics | ETL | PostgreSQL | Streamlit
-
-                  
+```text
+Raw Data
+   ↓
+Remove Spaces
+   ↓
+Standardize Text
+   ↓
+Handle Missing Values
+   ↓
+Convert Numeric Fields
