@@ -5,69 +5,200 @@
 ### End-to-End Data Engineering & Analytics Project
 
 <p>
-  <b>Python</b> •
-  <b>PostgreSQL</b> •
-  <b>Pandas</b> •
-  <b>NumPy</b> •
-  <b>Streamlit</b>
+  <b>🐍 Python</b> •
+  <b>🗄️ PostgreSQL</b> •
+  <b>🐼 Pandas</b> •
+  <b>🔢 NumPy</b> •
+  <b>📊 Streamlit</b>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Processing-blue?style=for-the-badge&logo=pandas">
+  <img src="https://img.shields.io/badge/NumPy-Numerical-orange?style=for-the-badge&logo=numpy">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit">
 </p>
 
 </div>
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project demonstrates an end-to-end **ETL (Extract, Transform, Load) and analytics workflow** for large-scale smart meter data.
+This project demonstrates an end-to-end **ETL (Extract, Transform, Load) and Analytics workflow** for large-scale smart meter data.
 
-The application extracts data from **PostgreSQL**, processes large datasets in batches using **Python and Pandas**, performs data cleaning and transformation, applies business-based classification logic, generates analytical summaries, and presents the processed results through an interactive **Streamlit dashboard**.
+The application extracts data from **PostgreSQL**, processes large datasets using **Python and Pandas**, performs data cleaning and transformation, applies business-based classification logic, loads the processed data, generates analytical summaries, and presents the results through an interactive **Streamlit dashboard**.
 
-The project demonstrates practical implementation of:
+### 🚀 Key Features
 
 - 🐍 Python-based ETL
-- 🗄️ SQL & PostgreSQL
-- 📊 Data Analytics
-- 🔄 Data Transformation
-- 📈 Data Aggregation
-- 🖥️ Streamlit Dashboard Development
+- 🗄️ PostgreSQL database integration
+- 📥 SQL-based data extraction
+- 🧹 Data cleaning and preprocessing
+- 🔄 Business rule-based transformation
+- 📊 Data aggregation and pivot analysis
+- 📈 KPI generation
+- 📥 Processed data loading
+- 🖥️ Interactive Streamlit dashboard
+- 🔎 Dynamic filters
+- 📤 CSV export
 
 ---
 
 # 🔄 ETL Workflow
 
-**PostgreSQL → Extract → Process → Transform → Aggregate → Streamlit Dashboard**
+<div align="center">
 
-| Stage | Technology | Purpose |
-|---|---|---|
-| 🗄️ Source | PostgreSQL | Source Data |
-| 📥 Extract | SQL + Python | Data Extraction |
-| 🐍 Process | Pandas | Data Processing |
-| 🔄 Transform | Pandas + NumPy | Cleaning, Mapping & Classification |
-| 📊 Aggregate | Pandas | Pivot Tables & KPIs |
-| ⚡ Dashboard | Streamlit | Interactive Analytics |
+<table>
+<tr>
+
+<td align="center">
+
+<h2>🗄️</h2>
+
+<b>POSTGRESQL</b>
+
+<br>
+
+Source Data
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>📥</h2>
+
+<b>EXTRACT</b>
+
+<br>
+
+SQL + Python
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>🧹</h2>
+
+<b>CLEAN</b>
+
+<br>
+
+Pandas
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>🔄</h2>
+
+<b>TRANSFORM</b>
+
+<br>
+
+Mapping + Rules
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>📥</h2>
+
+<b>LOAD</b>
+
+<br>
+
+Database / CSV
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>📊</h2>
+
+<b>ANALYTICS</b>
+
+<br>
+
+KPIs + Pivot
+
+</td>
+
+<td align="center">
+
+<h2>➡️</h2>
+
+</td>
+
+<td align="center">
+
+<h2>⚡</h2>
+
+<b>STREAMLIT</b>
+
+<br>
+
+Dashboard
+
+</td>
+
+</tr>
+</table>
+
+</div>
 
 ---
 
-# 📥 1. Data Extraction
+# 📥 1. EXTRACT
 
-Data is extracted from PostgreSQL using SQL queries and processed in batches using Python.
+<div align="center">
 
-### Key Techniques
+## 🗄️ PostgreSQL → Python
 
-- SQL-based data extraction
-- PostgreSQL connectivity using Psycopg2
-- Batch processing using `fetchmany()`
-- Large dataset handling
+</div>
+
+Data is extracted from PostgreSQL using SQL queries and Python.
 
 ### Extraction Process
 
 ```text
 PostgreSQL
-    ↓
+     ↓
 SQL Query
-    ↓
-Psycopg2 Connection
-    ↓
+     ↓
+Psycopg2
+     ↓
 Batch Fetching
-    ↓
+     ↓
 Pandas DataFrame
