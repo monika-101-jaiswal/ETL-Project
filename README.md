@@ -114,10 +114,6 @@ Data is extracted from PostgreSQL using SQL queries and processed in batches usi
 
 <div align="center">
 
-### 🔹 Extraction Process
-
-<img src="[screenshots/01-data-extraction.pn](https://github.com/monika-101-jaiswal/ETL-Project/blob/main/Screenshot%202026-08-16%20201416.png)" width="90%">
-
 </div>
 
 ---
